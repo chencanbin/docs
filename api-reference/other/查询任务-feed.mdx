@@ -1,0 +1,82 @@
+---
+title: "查询任务(feed)"
+description: ": "
+openapi: "GET /v1/suno/feed"
+mode: "wide"
+---
+
+<Info>
+**搜索关键词**: 查询任务(feed), suno, get, feed
+</Info>
+
+# 查询任务(feed)
+
+: 
+
+## 接口信息
+
+- **请求方法**: `GET`
+- **接口路径**: `/v1/suno/feed`
+- **认证方式**: Bearer Token
+- **标签**: 无
+
+## 认证说明
+
+请在请求头中包含有效的 Bearer Token：
+
+```bash
+Authorization: Bearer YOUR_API_KEY
+```
+
+## 使用说明
+
+使用下方的交互式 API 文档来测试此接口。你可以：
+
+1. 在右侧面板中输入请求参数
+2. 点击"Try it"按钮发送请求
+3. 查看实时的响应结果
+
+## 示例代码
+
+### cURL 示例
+
+```bash
+curl -X GET "http://129.226.58.30/v1/suno/feed" \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json"
+```
+
+### Python 示例
+
+```python
+import requests
+
+url = "http://129.226.58.30/v1/suno/feed"
+headers = {
+    "Authorization": "Bearer YOUR_API_KEY",
+    "Content-Type": "application/json"
+}
+
+response = requests.get(url, headers=headers)
+print(response.json())
+```
+
+### JavaScript 示例
+
+```javascript
+const response = await fetch('http://129.226.58.30/v1/suno/feed', {
+  method: 'GET',
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json'
+  }
+});
+
+const data = await response.json();
+console.log(data);
+```
+
+## 相关接口
+
+搜索相关标签: 无
+

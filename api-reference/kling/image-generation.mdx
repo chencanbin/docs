@@ -1,0 +1,82 @@
+---
+title: "Image Generation"
+description: ": Task Update Time, Unix Timestamp, in ms"
+openapi: "POST /kling/v1/images/generations"
+mode: "wide"
+---
+
+<Info>
+**搜索关键词**: kling, post, generation, images, generations, kling/kling(official format), image
+</Info>
+
+# Image Generation
+
+: Task Update Time, Unix Timestamp, in ms
+
+## 接口信息
+
+- **请求方法**: `POST`
+- **接口路径**: `/kling/v1/images/generations`
+- **认证方式**: Bearer Token
+- **标签**: Kling/Kling(Official Format)
+
+## 认证说明
+
+请在请求头中包含有效的 Bearer Token：
+
+```bash
+Authorization: Bearer YOUR_API_KEY
+```
+
+## 使用说明
+
+使用下方的交互式 API 文档来测试此接口。你可以：
+
+1. 在右侧面板中输入请求参数
+2. 点击"Try it"按钮发送请求
+3. 查看实时的响应结果
+
+## 示例代码
+
+### cURL 示例
+
+```bash
+curl -X POST "http://129.226.58.30/kling/v1/images/generations" \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json"
+```
+
+### Python 示例
+
+```python
+import requests
+
+url = "http://129.226.58.30/kling/v1/images/generations"
+headers = {
+    "Authorization": "Bearer YOUR_API_KEY",
+    "Content-Type": "application/json"
+}
+
+response = requests.post(url, headers=headers)
+print(response.json())
+```
+
+### JavaScript 示例
+
+```javascript
+const response = await fetch('http://129.226.58.30/kling/v1/images/generations', {
+  method: 'POST',
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json'
+  }
+});
+
+const data = await response.json();
+console.log(data);
+```
+
+## 相关接口
+
+搜索相关标签: `Kling/Kling(Official Format)`
+

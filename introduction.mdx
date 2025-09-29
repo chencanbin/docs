@@ -13,7 +13,7 @@
 
 ## 核心理念
 
-gptproto采用**异步任务架构**，所有AI服务以任务形式处理：
+EvoLink采用**异步任务架构**，所有AI服务以任务形式处理：
 
 <CardGroup cols={3}>
   <Card title="提交任务" icon="paper-plane">
@@ -37,7 +37,7 @@ gptproto采用**异步任务架构**，所有AI服务以任务形式处理：
 
 <Steps>
   <Step title="注册账户">
-    访问 [gptproto控制台](https://gptproto.ai/dashboard) 完成注册
+    访问 [GPTProto控制台](https://gptproto.com) 完成注册
   </Step>
 
   <Step title="创建密钥">
@@ -45,7 +45,7 @@ gptproto采用**异步任务架构**，所有AI服务以任务形式处理：
   </Step>
 
   <Step title="保存密钥">
-    复制生成的API密钥（格式：`sk-evo-xxxxxxxxxx`）
+    复制生成的API密钥（格式：`sk-xxxxxxxxxx`）
   </Step>
 </Steps>
 
@@ -61,7 +61,7 @@ gptproto采用**异步任务架构**，所有AI服务以任务形式处理：
 
 ```bash
 # 提交图像生成任务
-curl -X POST https://api.gptproto.ai/v1/images/generations \\
+curl -X POST https://api.evolink.ai/v1/images/generations \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{
@@ -98,7 +98,7 @@ curl -X POST https://api.gptproto.ai/v1/images/generations \\
 
 ```bash
 # 使用返回的任务ID查询状态
-curl https://api.gptproto.ai/v1/tasks/task-unified-1757156493-imcg5zqt \\
+curl https://api.evolink.ai/v1/tasks/task-unified-1757156493-imcg5zqt \\
   -H "Authorization: Bearer YOUR_API_KEY"
 ```
 
@@ -135,7 +135,7 @@ curl https://api.gptproto.ai/v1/tasks/task-unified-1757156493-imcg5zqt \\
 
     # GPT-4O 图像生成
     response = requests.post(
-        "https://api.gptproto.ai/v1/images/generations",
+        "https://api.evolink.ai/v1/images/generations",
         headers={"Authorization": "Bearer YOUR_API_KEY"},
         json={
             "model": "gpt-4o-image",
@@ -155,7 +155,7 @@ curl https://api.gptproto.ai/v1/tasks/task-unified-1757156493-imcg5zqt \\
     ```python
     # Seedream 4.0 图像生成
     response = requests.post(
-        "https://api.gptproto.ai/v1/images/generations",
+        "https://api.evolink.ai/v1/images/generations",
         headers={"Authorization": "Bearer YOUR_API_KEY"},
         json={
             "model": "doubao-seedream-4.0",
@@ -180,7 +180,7 @@ import time
 def generate_video():
     # 提交视频生成任务
     response = requests.post(
-        "https://api.gptproto.ai/v1/videos/generations",
+        "https://api.evolink.ai/v1/videos/generations",
         headers={"Authorization": "Bearer YOUR_API_KEY"},
         json={
             "model": "veo3-fast",
@@ -202,7 +202,7 @@ def generate_video():
 def monitor_task(task_id):
     while True:
         response = requests.get(
-            f"https://api.gptproto.ai/v1/tasks/{task_id}",
+            f"https://api.evolink.ai/v1/tasks/{task_id}",
             headers={"Authorization": "Bearer YOUR_API_KEY"}
         )
         
@@ -235,10 +235,10 @@ print(f"视频生成完成: {video_url}")
 import openai
 import requests
 
-class gptprotoClient:
+class EvoLinkClient:
     def __init__(self, api_key):
         self.api_key = api_key
-        self.base_url = "https://api.gptproto.ai"
+        self.base_url = "https://api.evolink.ai"
         self.headers = {"Authorization": f"Bearer {api_key}"}
     
     def create_image(self, model, prompt, **kwargs):
@@ -285,7 +285,7 @@ class gptprotoClient:
         raise TimeoutError("任务执行超时")
 
 # 使用示例
-client = gptprotoClient("YOUR_API_KEY")
+client = EvoLinkClient("YOUR_API_KEY")
 
 # 生成图像
 task = client.create_image(
@@ -300,10 +300,10 @@ print(f"图像URL: {result['results'][0]}")
 ### JavaScript/Node.js
 
 ```javascript
-class gptprotoClient {
+class EvoLinkClient {
   constructor(apiKey) {
     this.apiKey = apiKey;
-    this.baseURL = 'https://api.gptproto.ai';
+    this.baseURL = 'https://api.evolink.ai';
   }
   
   async createImage(model, prompt, options = {}) {
@@ -348,7 +348,7 @@ class gptprotoClient {
 
 // 使用示例
 async function generateImage() {
-  const client = new gptprotoClient('YOUR_API_KEY');
+  const client = new EvoLinkClient('YOUR_API_KEY');
   
   try {
     // 创建任务
@@ -382,15 +382,15 @@ import requests
 from typing import Optional
 import time
 
-class gptprotoError(Exception):
-    """gptproto API异常基类"""
+class EvoLinkError(Exception):
+    """EvoLink API异常基类"""
     pass
 
-class RateLimitError(gptprotoError):
+class RateLimitError(EvoLinkError):
     """频率限制异常"""
     pass
 
-class QuotaExhaustedError(gptprotoError):
+class QuotaExhaustedError(EvoLinkError):
     """配额耗尽异常"""
     pass
 
@@ -416,28 +416,28 @@ def handle_api_call(func, *args, **kwargs):
                 raise QuotaExhaustedError("账户余额不足，请充值")
             else:
                 error_data = response.json()
-                raise gptprotoError(f"API调用失败: {error_data.get('error', {}).get('message')}")
+                raise EvoLinkError(f"API调用失败: {error_data.get('error', {}).get('message')}")
                 
         except requests.exceptions.RequestException as e:
             if attempt == max_retries - 1:
-                raise gptprotoError(f"网络请求失败: {str(e)}")
+                raise EvoLinkError(f"网络请求失败: {str(e)}")
             time.sleep(retry_delay)
             retry_delay *= 2
     
-    raise gptprotoError("达到最大重试次数")
+    raise EvoLinkError("达到最大重试次数")
 
 # 使用示例
 try:
     result = handle_api_call(
         requests.post,
-        "https://api.gptproto.ai/v1/images/generations",
+        "https://api.evolink.ai/v1/images/generations",
         headers={"Authorization": "Bearer YOUR_API_KEY"},
         json={"model": "gpt-4o-image", "prompt": "测试图像"}
     )
     print("任务创建成功:", result['id'])
 except QuotaExhaustedError:
-    print("请前往控制台充值: https://gptproto.ai/dashboard/billing")
-except gptprotoError as e:
+    print("请前往控制台充值: https://evolink.ai/dashboard/billing")
+except EvoLinkError as e:
     print(f"API调用异常: {e}")
 ```
 
@@ -452,7 +452,7 @@ except gptprotoError as e:
     async def create_task_async(session, model, prompt):
         """异步创建任务"""
         async with session.post(
-            "https://api.gptproto.ai/v1/images/generations",
+            "https://api.evolink.ai/v1/images/generations",
             json={"model": model, "prompt": prompt}
         ) as response:
             return await response.json()
@@ -510,7 +510,7 @@ except gptprotoError as e:
             """处理单个任务"""
             # 创建任务
             response = requests.post(
-                "https://api.gptproto.ai/v1/images/generations",
+                "https://api.evolink.ai/v1/images/generations",
                 headers=self.headers,
                 json=task_data
             )
@@ -523,7 +523,7 @@ except gptprotoError as e:
             """等待任务完成"""
             while True:
                 response = requests.get(
-                    f"https://api.gptproto.ai/v1/tasks/{task_id}",
+                    f"https://api.evolink.ai/v1/tasks/{task_id}",
                     headers=self.headers
                 )
                 task = response.json()
@@ -563,7 +563,7 @@ except gptprotoError as e:
 
 ### 使用情况监控
 
-访问 [gptproto控制台](https://gptproto.ai/dashboard) 实时查看：
+访问 [EvoLink控制台](https://evolink.ai/dashboard) 实时查看：
 
 <CardGroup cols={2}>
   <Card title="实时监控" icon="chart-mixed">
@@ -587,14 +587,14 @@ except gptprotoError as e:
 import logging
 from datetime import datetime
 
-class gptprotoMonitor:
+class EvoLinkMonitor:
     def __init__(self):
         # 配置日志
         logging.basicConfig(
             level=logging.INFO,
             format='%(asctime)s - %(levelname)s - %(message)s',
             handlers=[
-                logging.FileHandler('gptproto_api.log'),
+                logging.FileHandler('evolink_api.log'),
                 logging.StreamHandler()
             ]
         )
@@ -613,7 +613,7 @@ class gptprotoMonitor:
         self.logger.error(f"API错误 | {context} | {str(error)}")
 
 # 使用示例
-monitor = gptprotoMonitor()
+monitor = EvoLinkMonitor()
 
 # 在API调用中使用
 start_time = time.time()
@@ -675,15 +675,15 @@ except Exception as e:
   **立即开始您的AI创造之旅**
 
   <CardGroup cols={3}>
-    <Card title="控制台" icon="browser" href="https://gptproto.ai/dashboard">
+    <Card title="控制台" icon="browser" href="https://evolink.ai/dashboard">
       管理API密钥和监控使用情况
     </Card>
 
-    <Card title="API文档" icon="book" href="https://docs.gptproto.ai/cn/api-manual/image-series/gpt-4o-image-generation">
+    <Card title="API文档" icon="book" href="https://docs.evolink.ai/cn/api-manual/image-series/gpt-4o-image-generation">
       查看详细的接口文档
     </Card>
 
-    <Card title="任务管理" icon="list-check" href="https://gptproto.ai/dashboard/usage">
+    <Card title="任务管理" icon="list-check" href="https://evolink.ai/dashboard/usage">
       了解任务状态查询
     </Card>
   </CardGroup>

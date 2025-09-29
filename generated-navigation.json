@@ -1,0 +1,131 @@
+[
+  {
+    "group": "豆包",
+    "pages": [
+      "api-reference/doubao/seedance-1-0"
+    ]
+  },
+  {
+    "group": "Qwen",
+    "pages": [
+      "api-reference/qwen/create-image",
+      "api-reference/qwen/image-edit"
+    ]
+  },
+  {
+    "group": "OpenAI GPT 系列",
+    "pages": [
+      "api-reference/openai-gpt/streaming"
+    ]
+  },
+  {
+    "group": "OpenAI 音频",
+    "pages": [
+      "api-reference/openai-audio/transcriptions",
+      "api-reference/openai-audio/speech"
+    ]
+  },
+  {
+    "group": "Gemini Veo 视频",
+    "pages": [
+      "api-reference/gemini-veo/veo3-pro",
+      "api-reference/gemini-veo/get-task-status"
+    ]
+  },
+  {
+    "group": "Gemini",
+    "pages": [
+      "api-reference/gemini/image-edit-1",
+      "api-reference/gemini/generatecontent-file-analysis",
+      "api-reference/gemini/streamgeneratecontent",
+      "api-reference/gemini/file-upload"
+    ]
+  },
+  {
+    "group": "Midjourney",
+    "pages": [
+      "api-reference/midjourney/listbycondition",
+      "api-reference/midjourney/fetchfromtask",
+      "api-reference/midjourney/blend",
+      "api-reference/midjourney/swapface",
+      "api-reference/midjourney/describe",
+      "api-reference/midjourney/imagine",
+      "api-reference/midjourney/modal",
+      "api-reference/midjourney/action",
+      "api-reference/midjourney/change"
+    ]
+  },
+  {
+    "group": "其他接口",
+    "pages": [
+      "api-reference/other/success-example",
+      "api-reference/other/查询任务-feed",
+      "api-reference/other/step-5-get-complete-music",
+      "api-reference/other/query-action-template",
+      "api-reference/other/get-api-v3-predictions-a59d1869ef0d471a8d253d7b6d93089a-result",
+      "api-reference/other/get-api-v3-minimax-hailuo-02-pro"
+    ]
+  },
+  {
+    "group": "Suno 音乐",
+    "pages": [
+      "api-reference/suno/generate-lyrics",
+      "api-reference/suno/query-lyrics",
+      "api-reference/suno/success-upload"
+    ]
+  },
+  {
+    "group": "Kling 视频",
+    "pages": [
+      "api-reference/kling/image-generation",
+      "api-reference/kling/text-to-video",
+      "api-reference/kling/image-to-video",
+      "api-reference/kling/query-task",
+      "api-reference/kling/kling-v2-5-turbo-pro",
+      "api-reference/kling/任务查询"
+    ]
+  },
+  {
+    "group": "Runway",
+    "pages": [
+      "api-reference/runway/act-two-emotion-migration",
+      "api-reference/runway/act-one-emotion-migration",
+      "api-reference/runway/generate-generate-task",
+      "api-reference/runway/video2video-video-to-video-style-re-drawing",
+      "api-reference/runway/submit-video-generation-task",
+      "api-reference/runway/query-task-1"
+    ]
+  },
+  {
+    "group": "Ideogram",
+    "pages": [
+      "api-reference/ideogram/edit-3-0-edit",
+      "api-reference/ideogram/remix-3-0-remix",
+      "api-reference/ideogram/replace-background-3-0-replace-background",
+      "api-reference/ideogram/generate-3-0-generate"
+    ]
+  },
+  {
+    "group": "Flux",
+    "pages": [
+      "api-reference/flux/查询任务",
+      "api-reference/flux/提交任务"
+    ]
+  },
+  {
+    "group": "Higgsfield",
+    "pages": [
+      "api-reference/higgsfield/generate-video",
+      "api-reference/higgsfield/query-task-2"
+    ]
+  },
+  {
+    "group": "MiniMax",
+    "pages": [
+      "api-reference/minimax/speech-2-5-hd-preview",
+      "api-reference/minimax/voice-clone",
+      "api-reference/minimax/fileupload",
+      "api-reference/minimax/hailuo-pro"
+    ]
+  }
+]
