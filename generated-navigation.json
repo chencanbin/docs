@@ -13,20 +13,20 @@
     ]
   },
   {
-    "group": "OpenAI GPT 系列",
+    "group": "OpenAI GPT Series",
     "pages": [
       "api-reference/openai-gpt/streaming"
     ]
   },
   {
-    "group": "OpenAI 音频",
+    "group": "OpenAI Audio",
     "pages": [
       "api-reference/openai-audio/transcriptions",
       "api-reference/openai-audio/speech"
     ]
   },
   {
-    "group": "Gemini Veo 视频",
+    "group": "Gemini Veo Video",
     "pages": [
       "api-reference/gemini-veo/veo3-pro",
       "api-reference/gemini-veo/get-task-status"
@@ -56,7 +56,7 @@
     ]
   },
   {
-    "group": "其他接口",
+    "group": "Other APIs",
     "pages": [
       "api-reference/other/success-example",
       "api-reference/other/查询任务-feed",
@@ -67,7 +67,7 @@
     ]
   },
   {
-    "group": "Suno 音乐",
+    "group": "Suno Music",
     "pages": [
       "api-reference/suno/generate-lyrics",
       "api-reference/suno/query-lyrics",
@@ -75,7 +75,7 @@
     ]
   },
   {
-    "group": "Kling 视频",
+    "group": "Kling Video",
     "pages": [
       "api-reference/kling/image-generation",
       "api-reference/kling/text-to-video",
@@ -108,8 +108,8 @@
   {
     "group": "Flux",
     "pages": [
-      "api-reference/flux/查询任务",
-      "api-reference/flux/提交任务"
+      "api-reference/flux/query-task",
+      "api-reference/flux/submit-task"
     ]
   },
   {

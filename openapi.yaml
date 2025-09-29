@@ -6603,7 +6603,7 @@ components:
       bearerFormat: JWT
       description: "使用 Bearer Token 进行认证，格式：Authorization: Bearer YOUR_API_KEY"
 servers:
-  - url: http://129.226.58.30
-    description: API中转站服务器
+  - url: https://gptproto.com
+    description: API示例服务器
 security:
   - bearerAuth: []

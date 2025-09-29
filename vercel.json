@@ -1,0 +1,12 @@
+{
+  "buildCommand": "echo 'Building Mintlify docs'",
+  "outputDirectory": ".",
+  "installCommand": "npm install -g @mintlify/cli",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

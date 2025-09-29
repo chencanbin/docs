@@ -26,6 +26,7 @@
     "url": "http://129.226.58.30"
   },
   "tabs": [
+
     {
       "name": "API Reference",
       "url": "api-reference"
@@ -33,21 +34,33 @@
   ],
   "anchors": [
     {
+      "name": "Documentation",
+      "icon": "book-open",
+      "url": "introduction"
+    },
+    {
       "name": "API Reference",
       "icon": "rectangle-terminal",
       "url": "api-reference"
     }
   ],
   "search": {
-    "prompt": "搜索API接口、模型或功能..."
+    "prompt": "Search API, model, or feature..."
   },
   "navigation": [
+    {
+      "group": "文档",
+      "pages": [
+        "introduction",
+        "quickstart"
+      ]
+    },
     {
       "group": "API Reference",
       "pages": [
         "api-reference/introduction",
         {
-          "group": "豆包",
+          "group": "Doubao",
           "pages": [
             "api-reference/doubao/seedance-1-0"
           ]
@@ -60,20 +73,20 @@
           ]
         },
         {
-          "group": "OpenAI GPT 系列",
+          "group": "OpenAI GPT Series",
           "pages": [
             "api-reference/openai-gpt/streaming"
           ]
         },
         {
-          "group": "OpenAI 音频",
+          "group": "OpenAI Audio",
           "pages": [
             "api-reference/openai-audio/transcriptions",
             "api-reference/openai-audio/speech"
           ]
         },
         {
-          "group": "Gemini Veo 视频",
+          "group": "Gemini Veo Video",
           "pages": [
             "api-reference/gemini-veo/veo3-pro",
             "api-reference/gemini-veo/get-task-status"
@@ -103,7 +116,7 @@
           ]
         },
         {
-          "group": "Suno 音乐",
+          "group": "Suno Music",
           "pages": [
             "api-reference/suno/generate-lyrics",
             "api-reference/suno/query-lyrics",
@@ -111,7 +124,7 @@
           ]
         },
         {
-          "group": "Kling 视频",
+          "group": "Kling Video",
           "pages": [
             "api-reference/kling/image-generation",
             "api-reference/kling/text-to-video",
@@ -169,7 +182,7 @@
   ],
 
   "api": {
-    "baseUrl": "http://129.226.58.30",
+    "baseUrl": "https://gptproto.com",
     "auth": {
       "method": "bearer"
     },
@@ -177,5 +190,5 @@
       "mode": "show"
     }
   },
-  "openapi": "openapi.yaml"
+  "openapi": "./openapi.yaml"
 }

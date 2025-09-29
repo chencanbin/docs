@@ -318,28 +318,28 @@ def generate_navigation_config(endpoints_by_category: Dict[str, List[Dict]]) -> 
 
     category_names = {
         'openai': 'OpenAI',
-        'openai-gpt': 'OpenAI GPT 系列',
+        'openai-gpt': 'OpenAI GPT Series',
         'openai-gpt4o': 'OpenAI GPT-4o',
-        'openai-audio': 'OpenAI 音频',
+        'openai-audio': 'OpenAI Audio',
         'claude': 'Claude',
         'gemini': 'Gemini',
-        'gemini-veo': 'Gemini Veo 视频',
+        'gemini-veo': 'Gemini Veo Video',
         'grok': 'Grok',
         'midjourney': 'Midjourney',
-        'suno': 'Suno 音乐',
-        'kling': 'Kling 视频',
+        'suno': 'Suno Music',
+        'kling': 'Kling Video',
         'runway': 'Runway',
         'ideogram': 'Ideogram',
         'flux': 'Flux',
-        'doubao': '豆包',
+        'doubao': 'Doubao',
         'higgsfield': 'Higgsfield',
         'qwen': 'Qwen',
         'minimax': 'MiniMax',
-        'image-models': '图像生成模型',
-        'audio-models': '音频处理模型',
-        'file-services': '文件服务',
-        'task-services': '任务管理',
-        'other': '其他接口'
+        'image-models': 'Image Generation Models',
+        'audio-models': 'Audio Processing Models',
+        'file-services': 'File Services',
+        'task-services': 'Task Management',
+        'other': 'Other APIs'
     }
 
     navigation_groups = []
