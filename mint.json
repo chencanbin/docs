@@ -32,24 +32,13 @@
       "url": "api-reference"
     }
   ],
-  "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open",
-      "url": "introduction"
-    },
-    {
-      "name": "API Reference",
-      "icon": "rectangle-terminal",
-      "url": "api-reference"
-    }
-  ],
+
   "search": {
     "prompt": "Search API, model, or feature..."
   },
   "navigation": [
     {
-      "group": "文档",
+      "group": "Documentation",
       "pages": [
         "introduction",
         "quickstart"
